@@ -12,7 +12,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@socketsupply/op-node": "^1.4.1",
+    "@socketsupply/op-node": "^1.6.0",
     "esbuild": "^0.14.32"
   }
 }
