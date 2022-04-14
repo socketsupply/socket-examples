@@ -24,4 +24,4 @@ yarn
 
 5. Run the application with `npm start` or `yarn start`
 
-### [More examples](../)
+### [More examples](../README.md)

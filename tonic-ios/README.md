@@ -149,4 +149,4 @@ to see the logs that your app outputs.
 [A5]:https://developer.apple.com/account/resources/certificates/add
 [1]:https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html
 
-### [More examples](../)
+### [More examples](../README.md)
