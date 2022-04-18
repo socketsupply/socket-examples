@@ -70,6 +70,7 @@ async function main () {
 
     Other:
       Another Test: t + Alt
+      !Bloop: b + Alt
       Beep: T + Meta
     ;
   `
