@@ -54,7 +54,7 @@ async function main () {
     format: 'cjs',
     minify: true,
     outfile: path.join(target, 'bundle.js'),
-    platform: 'browser'
+    platform: 'node'
   })
 
   //
