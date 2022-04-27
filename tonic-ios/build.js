@@ -52,9 +52,8 @@ async function main () {
     bundle: true,
     keepNames: true,
     format: 'cjs',
-    minify: true,
-    outfile: path.join(target, 'bundle.js'),
-    platform: 'node'
+    // minify: true,
+    outfile: path.join(target, 'bundle.js')
   })
 
   //

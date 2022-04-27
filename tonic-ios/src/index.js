@@ -1,8 +1,6 @@
 const Tonic = require('@socketsupply/tonic')
 const Components = require('@socketsupply/components')
-
-const { createServer } = require('net')
-const { readFile } = require('fs')
+const { tcp } = require('@socketsupply/mobile')
 
 Components(Tonic)
 
@@ -90,7 +88,7 @@ class AppContainer extends Tonic {
 
       this.log('network interfaces', data)
 
-      const server = createServer({ port: 9200 })
+      const server = tcp.createServer({ port: 9200 })
 
       server.on('connection', socket => {
         socket.on('data', data => {
@@ -112,7 +110,7 @@ class AppContainer extends Tonic {
       //
       this.log('attempt to connect')
 
-      const socket = await net.createConnection({
+      const socket = await tcp.createConnection({
         port: 9200,
         address: '192.168.13.235'
       })
@@ -150,9 +148,6 @@ class AppContainer extends Tonic {
   }
 
   async connected () {
-    window.system.receiveData({ id: 0 }, (err, data) => {
-      this.querySelector('#output').value += `\n${JSON.stringify(err || data)}`
-    })
   }
 
   async render () {
@@ -172,8 +167,11 @@ class AppContainer extends Tonic {
         <tonic-input id="response" label="recieve" readonly="true">
         </tonic-input>
 
-        <tonic-button width="100%" data-event="listen" id="start">Listen</tonic-button>
-        <tonic-button width="100%" data-event="connect" id="start">Connect</tonic-button>
+        <tonic-button width="100%" data-event="listen" id="start">Listen
+        </tonic-button>
+
+        <tonic-button width="100%" data-event="connect" id="start">Connect
+        </tonic-button>
       </div>
 
       <tonic-toaster-inline

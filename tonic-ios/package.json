@@ -4,11 +4,16 @@
   "main": "main.js",
   "devDependencies": {
     "clean-css": "^5.1.1",
+    "esbuild": "^0.14.38",
     "stylus": "^0.54.8"
   },
+  "scripts": {
+    "serve": "esbuild --servedir=dist/op-dev.app/Contents/Resources",
+    "dev": "npm run serve & op . -r --port=8000"
+  },
   "dependencies": {
-    "@socketsupply/components": "^13.0.0",
-    "@socketsupply/tonic": "^14.0.0",
-    "esbuild": "^0.13.12"
+    "@socketsupply/components": "^13.2.17",
+    "@socketsupply/mobile": "^1.0.7",
+    "@socketsupply/tonic": "^14.1.5"
   }
 }
