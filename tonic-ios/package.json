@@ -8,8 +8,8 @@
     "stylus": "^0.54.8"
   },
   "scripts": {
-    "_serve": "esbuild --servedir=\"op . --target\"",
-    "dev": "npm run _serve & op . -r --port=8000"
+    "build": "op . -c -p",
+    "watch": "op . -r --port=8000 & ./build.js --watch=`op . --target`"
   },
   "dependencies": {
     "@socketsupply/components": "^13.2.17",
