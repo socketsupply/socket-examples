@@ -190,6 +190,8 @@ class AppContainer extends Tonic {
 
   static setHeader (message) {
     const appHeader = document.querySelector('app-header')
+    if (!appHeader) return
+
     appHeader.reRender({
       message
     })
@@ -328,9 +330,10 @@ class AppContainer extends Tonic {
     `
   }
 }
+Tonic.add(AppContainer)
 
 window.onload = () => {
-  if (isTest) {
+  if (isTest && process.index === 0) {
     //
     // If we are in test mode, we pass in the dataLayerCache because we want
     // the test harness to control it, resetting the data for each test.
@@ -339,8 +342,11 @@ window.onload = () => {
     return
   }
 
-  Tonic.add(AppContainer)
   setBackgroundColor()
+
+  const app = new AppContainer()
+  app.id = 'root'
+  document.body.appendChild(app)
 }
 
 function loadTest (AppContainer) {
