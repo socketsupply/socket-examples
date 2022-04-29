@@ -1,12 +1,9 @@
 // @ts-check
 'use strict'
 
-
 const { test } = require('tapzero')
 
 const TestCommon = require('./test-common.js')
-
-// const dom = require('../../../../src/render/test-dom')
 
 test('app-container exists', async (t) => {
   const common = await TestCommon.create()
