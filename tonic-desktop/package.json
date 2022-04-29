@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@socketsupply/components": "^13.0.0",
-    "@socketsupply/op-node": "^1.6.1",
+    "@socketsupply/op-node": "github:socketsupply/op-node#ee24fbc",
     "@socketsupply/tonic": "^14.0.0",
     "esbuild": "^0.13.12"
   }
