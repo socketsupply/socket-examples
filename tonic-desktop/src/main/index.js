@@ -18,6 +18,23 @@ async function main () {
 
   //
   // ## Example
+  // Handling inbound messages and returning responses.
+  // This example is basically an "echo" server...
+  //
+  system.receive = async (command, value) => {
+    if (value && value.restart) {
+      await system.restart()
+    }
+
+    return {
+      received: value,
+      command,
+      counter: counter++
+    }
+  }
+
+  //
+  // ## Example
   // Navigate from the current location
   //
   const resourcesDirectory = path.dirname(process.argv[1])
@@ -76,23 +93,6 @@ async function main () {
   `
 
   await system.setMenu({ window: 0, value: menu })
-
-  //
-  // ## Example
-  // Handling inbound messages and returning responses.
-  // This example is basically an "echo" server...
-  //
-  system.receive = async (command, value) => {
-    if (value && value.restart) {
-      await system.restart()
-    }
-
-    return {
-      received: value,
-      command,
-      counter: counter++
-    }
-  }
 
   //
   // ## Example
