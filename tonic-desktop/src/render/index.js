@@ -305,7 +305,7 @@ class AppContainer extends Tonic {
         <tonic-input id="send" label="send">
         </tonic-input>
 
-        <tonic-input id="response" label="recieve" readonly="true">
+        <tonic-input id="response" label="receive" readonly="true">
         </tonic-input>
       </div>
 
