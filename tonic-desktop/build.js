@@ -1,6 +1,5 @@
 const path = require('path')
 const fs = require('fs/promises')
-const { execSync: exec } = require('child_process')
 
 const CleanCSS = require('clean-css')
 const stylus = require('stylus')
@@ -44,6 +43,15 @@ async function main () {
     keepNames: true,
     // minify: true,
     outfile: path.join(target, 'render.js'),
+    platform: 'browser'
+  })
+
+  await esbuild.build({
+    entryPoints: ['test/render/index.js'],
+    bundle: true,
+    keepNames: true,
+    // minify: true,
+    outfile: path.join(target, 'test.js'),
     platform: 'browser'
   })
 
