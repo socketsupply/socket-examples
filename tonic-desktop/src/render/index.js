@@ -6,6 +6,8 @@ const Components = require('@socketsupply/components')
 
 Components(Tonic)
 
+const isTest = process.argv.includes('--test=1')
+
 let elementDraggingIndicator
 let elementUnderDrag
 let lastElementUnderDrag
@@ -328,6 +330,31 @@ class AppContainer extends Tonic {
 }
 
 window.onload = () => {
+  if (isTest) {
+    //
+    // If we are in test mode, we pass in the dataLayerCache because we want
+    // the test harness to control it, resetting the data for each test.
+    //
+    loadTest(AppContainer)
+    return
+  }
+
   Tonic.add(AppContainer)
   setBackgroundColor()
+}
+
+function loadTest (AppContainer) {
+  //
+  // We have two bundles, src & test. to avoid duplicate classes
+  // shared between two bundles, expose important things as global
+  // variables.
+  //
+  Reflect.set(window, 'TEST_AppContainer', AppContainer)
+  Reflect.set(window, 'TEST_Tonic', Tonic)
+
+  const script = document.createElement('script')
+  script.setAttribute('type', 'text/javascript')
+  script.setAttribute('src', 'test.js')
+
+  document.body.appendChild(script)
 }
