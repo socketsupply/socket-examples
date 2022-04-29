@@ -1,3 +1,6 @@
+// @ts-check
+'use strict'
+
 const Tonic = require('@socketsupply/tonic')
 const Components = require('@socketsupply/components')
 
@@ -144,24 +147,6 @@ window.addEventListener('click', async event => {
 })
 
 //
-// Receive arbitrary/non-request-response data from the main process.
-//
-window.addEventListener('data', event => {
-  if (event.detail.env) {
-    console.log(event)
-    return
-  }
-
-  if (event.detail.size !== event.detail.sending.length) {
-    throw new Error('Not aligned: detail size not accurate')
-  } else {
-    console.log(`received ${event.detail.size} characters`)
-  }
-
-  AppContainer.setHeader(`${event.detail.counter} messages received`)
-})
-
-//
 // Create some arbitrary components with our nifty component framework.
 //
 class AppHeader extends Tonic {
@@ -175,6 +160,32 @@ class AppHeader extends Tonic {
 Tonic.add(AppHeader)
 
 class AppContainer extends Tonic {
+  constructor () {
+    super()
+
+    //
+    // Receive arbitrary/non-request-response data from the main process.
+    //
+    window.addEventListener('data', (event) => {
+      this.onData(event)
+    })
+  }
+
+  onData (event) {
+    if (event.detail.env) {
+      console.log(event)
+      return
+    }
+
+    if (event.detail.size !== event.detail.sending.length) {
+      throw new Error('Not aligned: detail size not accurate')
+    } else {
+      console.log(`received ${event.detail.size} characters`)
+    }
+
+    AppContainer.setHeader(`${event.detail.counter} messages received`)
+  }
+
   static setHeader (message) {
     const appHeader = document.querySelector('app-header')
     appHeader.reRender({
