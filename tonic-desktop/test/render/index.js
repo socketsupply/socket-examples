@@ -15,11 +15,11 @@ test('app-container exists', async (t) => {
     t.ok(container)
     t.ok(document.body.contains(container))
 
-    const butIncr = document.querySelector('[data-event="inc"]')
-    const butDeploy = document.querySelector('[data-event="deploy"]')
+    // const butIncr = document.querySelector('[data-event="inc"]')
+    // const butDeploy = document.querySelector('[data-event="deploy"]')
 
-    t.ok(butIncr)
-    t.ok(butDeploy)
+    // t.ok(butIncr)
+    // t.ok(butDeploy)
   } finally {
     await common.close()
   }
