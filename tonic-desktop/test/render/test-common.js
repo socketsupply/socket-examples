@@ -76,7 +76,7 @@ function monkeyPatchConsole () {
     }
 
     system.send({
-      api: 'app',
+      api: 'op-node',
       method: 'testUncaught',
       arguments: [{
         err: err,
@@ -96,7 +96,7 @@ function monkeyPatchConsole () {
     }
 
     system.send({
-      api: 'app',
+      api: 'op-node',
       method: 'testUncaught',
       arguments: [{
         err: err,
@@ -111,7 +111,7 @@ function monkeyPatchConsole () {
   function hookLog (...args) {
     oldLog.apply(console, args)
     system.send({
-      api: 'app',
+      api: 'op-node',
       method: 'testConsole',
       arguments: [{
         args: JSON.stringify(args)
