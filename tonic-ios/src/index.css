@@ -1,8 +1,6 @@
 @import 'styles/overrides.css';
 @import 'styles/index.css';
 
-@import 'views/header/index.css';
-
 * {
   -webkit-user-select: none;
   -webkit-user-drag: none;

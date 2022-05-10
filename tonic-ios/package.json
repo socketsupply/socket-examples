@@ -8,12 +8,11 @@
     "stylus": "^0.54.8"
   },
   "scripts": {
+    "start": "op . -ios -simulator -r",
     "build": "op . -c -p",
     "watch": "op . -r --port=8000 & ./build.js --watch=`op . --target`"
   },
   "dependencies": {
-    "@socketsupply/components": "^13.2.17",
-    "@socketsupply/mobile": "^1.0.7",
     "@socketsupply/tonic": "^14.1.5"
   }
 }
