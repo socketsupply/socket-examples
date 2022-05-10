@@ -15,30 +15,23 @@ body {
   font: 16px var(--tonic-body);
   background-color: var(--tonic-window);
   font-family: 'Inter';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-grid.c2 {
-  grid-template-columns: 1fr 1fr;
-}
-
-code {
+img {
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  overflow: scroll;
 }
 
-h1, h2, h3, h4 {
+h3 {
   font-family: 'Inter Black';
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: var(--tonic-info);
-}
-
-h1 {
   font-family: var(--tonic-header);
+  text-align: center;
 }
 
