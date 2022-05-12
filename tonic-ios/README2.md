@@ -38,6 +38,12 @@ you can run the following command
 sudo xcode-select --switch /Applications/Xcode.app
 ```
 
+### `fatal error: 'lib/uv/include/uv.h' file not found`
+
+Make sure your local `op` binary has been compiled with `ios`
+parameter in `./bin/bootstrap.sh dev ios`, otherwise the uv.h
+does not exist.
+
 ### `unable to find utility simctl`
 
 You need to have [XCode](https://developer.apple.com/xcode/resources/) installed on your macbook.
