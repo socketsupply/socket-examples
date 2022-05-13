@@ -4,7 +4,7 @@ class AppContainer extends Tonic {
     const anchor = Tonic.match(e.target, 'a')
 
     if (anchor) {
-      window.external.invoke(`ipc://external?href=${encodeURIComponent(anchor.href)}`)
+      window.system.openExternal(anchor.href)
       e.stopPropagation()
       return
     }
