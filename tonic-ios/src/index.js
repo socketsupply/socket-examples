@@ -1,9 +1,18 @@
 const Tonic = require('@socketsupply/tonic')
 class AppContainer extends Tonic {
+  async click (e) {
+    const anchor = Tonic.match(e.target, 'a')
+
+    if (anchor) {
+      window.system.openExternal(anchor.href)
+      e.stopPropagation()
+      return
+    }
+  }
   render () {
     return this.html`
       <img src="images/nav-logo.svg">
-      <h3>Read more about Operator Framework for iOS at https://operatorframework.dev/ios</h3>
+      <h3>Read more about Operator Framework for iOS at <a href="https://operatorframework.dev/ios">https://operatorframework.dev/ios</a></h3>
     `
   }
 }
