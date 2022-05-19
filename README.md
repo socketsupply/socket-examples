@@ -1,6 +1,6 @@
-# Operator Framework example projects
+# Socket SDK example projects
 
-This repository contains example projects powered by the [Operator Framework](https://operatorframework.dev) which helps you build lean, fast, cross-platform apps for desktop and mobile, using the web technologies you already know.
+This repository contains example projects powered by the [Socket SDK](https://socket-sdk.dev) which helps you build lean, fast, cross-platform apps for desktop and mobile, using the web technologies you already know.
 
 - [React desktop example](./react-desktop/)
 - [Tonic destop example](./tonic-desktop/)

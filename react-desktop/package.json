@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "op . -r",
-    "build": "op . -xd -p"
+    "start": "ssc . -r",
+    "build": "ssc . -xd -p"
   },
   "dependencies": {
     "react": "^18.0.0",

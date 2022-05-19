@@ -1,5 +1,5 @@
 {
-  "name": "op-ios-example",
+  "name": "socket-sdk-ios-example",
   "version": "1.0.0",
   "main": "main.js",
   "devDependencies": {
@@ -8,9 +8,9 @@
     "stylus": "^0.54.8"
   },
   "scripts": {
-    "start": "op . -ios -simulator -r",
-    "build": "op . -c -p",
-    "watch": "op . -r --port=8000 & ./build.js --watch=`op . --target`"
+    "start": "ssc . -ios -simulator -r",
+    "build": "ssc . -c -p",
+    "watch": "ssc . -r --port=8000 & ./build.js --watch=`ssc . --target`"
   },
   "dependencies": {
     "@socketsupply/tonic": "^14.1.5"
