@@ -1,4 +1,4 @@
-# op for iOS
+# Socket SDK example app for iOS
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ You will need [Xcode](https://developer.apple.com/xcode/resources/) installed.
 
 1. Clone the repo.
 ```bash
-git clone git@github.com:socketsupply/op-examples.git
+git clone git@github.com:socketsupply/socket-sdk-examples.git
 ```
 2. Open the React desktop example directory.
 ```bash
@@ -22,7 +22,7 @@ or
 ```bash
 yarn
 ```
-4. Install the Operator Framewort following with `brew`, `apt-get` or `nuget` (we'll publish it soon).
+4. Install the Socket SDK compiler following with `brew`, `apt-get` or `nuget` (we'll publish it soon).
 
 5. Run the application with `npm start` or `yarn start`
 
@@ -39,7 +39,7 @@ process attach --name TestExample-dev
 ### Logging
 
 To see logs, open `Console.app` (installed on MacOS by default) and in the
-right side panel pick <YourSimulatorDeviceName>. You can filter by `op`
+right side panel pick <YourSimulatorDeviceName>. You can filter by `ssc`
 to see the logs that your app outputs.
 
 ### [More examples](../README.md)

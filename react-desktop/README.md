@@ -1,4 +1,4 @@
-# A React example destop app built with Operator Framework
+# A React example destop app built with Socket SDK
 
 This app uses [op-node](https://github.com/socketsupply/op-node) as a backend and [React](https://reactjs.org) code bundled with [esbuild](https://esbuild.github.io) for a frontend.
 
@@ -6,7 +6,7 @@ This app uses [op-node](https://github.com/socketsupply/op-node) as a backend an
 
 1. Clone the repo.
 ```bash
-git clone git@github.com:socketsupply/op-examples.git
+git clone git@github.com:socketsupply/socket-sdk-examples.git
 ```
 2. Open the React desktop example directory.
 ```bash
@@ -20,7 +20,7 @@ or
 ```bash
 yarn
 ```
-4. Install the Operator Framewort following with `brew`, `apt-get` or `nuget` (we'll publish it soon).
+4. Install the Socket SDK compiler following with `brew`, `apt-get` or `nuget` (we'll publish it soon).
 
 5. Run the application with `npm start` or `yarn start`
 

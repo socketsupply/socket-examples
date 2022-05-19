@@ -12,7 +12,7 @@ class AppContainer extends Tonic {
   render () {
     return this.html`
       <img src="images/nav-logo.svg">
-      <h3>Read more about Operator Framework for iOS at <a href="https://operatorframework.dev/ios">https://operatorframework.dev/ios</a></h3>
+      <h3>Read more about Socket SDK for iOS at <a href="https://socket-sdk.dev/ios">https://socket-sdk.dev/ios</a></h3>
     `
   }
 }
