@@ -1,5 +1,5 @@
 import { dirname, join } from 'path';
-import system from '@socketsupply/op-node';
+import system from '@socketsupply/ssc-node';
 
 async function main () {
   await system.show({ window: 0 });
@@ -22,7 +22,7 @@ async function main () {
   await system.navigate({ window: 0, value: `file://${file}` });
 
   let counter = 0;
-  
+
   function increaseCounterAndSendMessage(type) {
     counter += 1;
     system.send({
