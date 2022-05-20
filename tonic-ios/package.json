@@ -2,15 +2,15 @@
   "name": "socket-sdk-ios-example",
   "version": "1.0.0",
   "main": "main.js",
-  "devDependencies": {
-    "clean-css": "^5.1.1",
-    "esbuild": "^0.14.38",
-    "stylus": "^0.54.8"
-  },
   "scripts": {
     "start": "ssc . -ios -simulator -r",
     "build": "ssc . -c -p",
     "watch": "ssc . -r --port=8000 & ./build.js --watch=`ssc . --target`"
+  },
+  "devDependencies": {
+    "clean-css": "^5.1.1",
+    "esbuild": "^0.14.39",
+    "stylus": "^0.57.0"
   },
   "dependencies": {
     "@socketsupply/tonic": "^14.1.5"

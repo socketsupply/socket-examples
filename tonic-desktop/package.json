@@ -8,13 +8,13 @@
   },
   "devDependencies": {
     "clean-css": "^5.1.1",
-    "stylus": "^0.54.8",
-    "tapzero": "0.6.1"
+    "stylus": "^0.57.0",
+    "tapzero": "0.6.1",
+    "esbuild": "^0.14.39"
   },
   "dependencies": {
     "@socketsupply/components": "^13.0.0",
-    "@socketsupply/op-node": "1.6.3",
-    "@socketsupply/tonic": "^14.0.0",
-    "esbuild": "^0.13.12"
+    "@socketsupply/ssc-node": "1.7.0",
+    "@socketsupply/tonic": "^14.0.0"
   }
 }
