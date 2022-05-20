@@ -7,12 +7,12 @@
     "start": "ssc . -r",
     "build": "ssc . -xd -p"
   },
-  "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
   "devDependencies": {
-    "@socketsupply/op-node": "^1.6.1",
-    "esbuild": "^0.14.32"
+    "esbuild": "^0.14.39"
+  },
+  "dependencies": {
+    "@socketsupply/ssc-node": "^1.7.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }
