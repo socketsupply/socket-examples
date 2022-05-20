@@ -1,6 +1,6 @@
 const path = require('path')
 const assert = require('assert')
-const system = require('@socketsupply/op-node')
+const system = require('@socketsupply/ssc-node')
 
 let counter = 0
 
