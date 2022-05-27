@@ -1,0 +1,18 @@
+{
+  "name": "ios-dns-lookup",
+  "version": "1.0.0",
+  "description": "DNS lookup example",
+  "main": "main.js",
+  "author": "Socket Supply Co. <hello@socketsupply.co>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@socketsupply/mobile": "^1.0.9"
+  },
+  "scripts": {
+    "start": "ssc . -ios -simulator -r"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.40"
+  }
+}
