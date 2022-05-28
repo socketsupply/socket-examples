@@ -5,6 +5,7 @@ This repository contains example projects powered by the [Socket SDK](https://so
 - [React desktop example](./react-desktop/)
 - [Tonic destop example](./tonic-desktop/)
 - [Tonic iOS example](./tonic-ios/)
+- [DNS Lookup iOS example](./ios-dns-lookup/)
 
 ## Support
 
