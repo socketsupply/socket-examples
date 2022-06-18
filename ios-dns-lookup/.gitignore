@@ -1,4 +1,6 @@
 *.mobileprovision
 /node_modules
-/dist
+/dist/*
+!/dist/ios-dns-dev.xctestplan
+!/dist/ios-dns-devUITests
 package-lock.json
