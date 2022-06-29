@@ -16,6 +16,10 @@ you already know.
 - [Tonic iOS Example](mobile-ios-tonic)
 - [DNS Lookup iOS Example](mobile-ios-dns-lookup)
 
+## Android Examples
+
+- [Tonic Android Example](mobile-android-tonic)
+
 ## Support
 
 If you need any help, please join our [Discord](https://discord.gg/YPV32gKCsH),
