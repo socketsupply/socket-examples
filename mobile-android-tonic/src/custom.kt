@@ -9,7 +9,7 @@ public open class ExampleAndroidActivity : WebViewActivity() {
   override fun onCreate (state: android.os.Bundle?) {
     super.onCreate(state);
 
-    val core = this.core as NativeCore
+    val core = this.core
 
     if (core != null) {
       android.util.Log.d(TAG, core.helloWorld());
