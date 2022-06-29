@@ -13,8 +13,8 @@ you already know.
 
 ## iOS Examples
 
-- [Tonic iOS Example](ios-tonic)
-- [DNS Lookup iOS Example](ios-dns-lookup)
+- [Tonic iOS Example](mobile-ios-tonic)
+- [DNS Lookup iOS Example](mobile-ios-dns-lookup)
 
 ## Support
 
