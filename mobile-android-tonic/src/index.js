@@ -1,4 +1,7 @@
 const Tonic = require('@socketsupply/tonic')
+window.io = require('@socketsupply/io')
+console.log(window.io.os.arch())
+
 class AppContainer extends Tonic {
   async click (e) {
     const anchor = Tonic.match(e.target, 'a')
