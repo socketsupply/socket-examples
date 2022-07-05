@@ -7,14 +7,14 @@ you already know.
 
 ## Desktop Examples
 
-- [React Desktop Example](desktop-react)
-- [Tonic Desktop Example](desktop-tonic)
-- [Kotlin/Native & Kotlin.js Desktop Example](desktop-kotlin-native)
+- [React Desktop Example](desktop-node-react)
+- [Tonic Desktop Example](desktop-node-tonic)
+- [Kotlin/Native & Kotlin.js Desktop Example](desktop-kotlin-kotlinjs)
 
 ## iOS Examples
 
-- [Tonic iOS Example](mobile-ios-tonic)
-- [DNS Lookup iOS Example](mobile-ios-dns-lookup)
+- [Tonic iOS Example](ios-tonic)
+- [DNS Lookup iOS Example](ios-tonic--dns-lookup)
 
 ## Support
 
