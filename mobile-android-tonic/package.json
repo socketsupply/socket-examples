@@ -9,7 +9,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@socketsupply/io": "github:socketsupply/io#ipc-fs-api",
+    "@socketsupply/io": "github:socketsupply/io#master",
     "@socketsupply/tonic": "^14.1.5"
   }
 }
