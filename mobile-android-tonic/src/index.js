@@ -1,5 +1,5 @@
 const Tonic = require('@socketsupply/tonic')
-window.io = require('@socketsupply/io')
+window.io = require('@socketsupply/io/node')
 console.log(window.io.os.arch())
 
 class AppContainer extends Tonic {
