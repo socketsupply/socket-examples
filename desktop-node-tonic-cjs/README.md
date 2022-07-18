@@ -1,4 +1,4 @@
-# A React example destop app built with Socket SDK
+# A Tonic example desktop app built with Socket SDK
 
 This app uses [ssc-node](https://github.com/socketsupply/ssc-node) as a backend and [Tonic](https://tonicframework.dev) code bundled with [esbuild](https://esbuild.github.io) for a frontend.
 
