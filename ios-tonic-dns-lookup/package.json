@@ -7,10 +7,10 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@socketsupply/mobile": "^1.0.9"
+    "@socketsupply/io": "github:socketsupply/io#esm"
   },
   "scripts": {
-    "start": "ssc . -ios -simulator -r"
+    "start": "ssc compile --platform=iossimulator -r ."
   },
   "devDependencies": {
     "esbuild": "^0.14.40"
