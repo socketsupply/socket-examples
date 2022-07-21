@@ -1,5 +1,7 @@
-const Tonic = require('@socketsupply/tonic')
-window.io = require('@socketsupply/io/node')
+import Tonic from '@socketsupply/tonic'
+import * as io from '@socketsupply/io'
+
+window.io = io
 console.log(window.io.os.arch())
 
 class AppContainer extends Tonic {

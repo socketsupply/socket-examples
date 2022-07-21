@@ -58,9 +58,7 @@ async function main () {
   const params = {
     entryPoints: ['src/index.js'],
     bundle: true,
-    keepNames: true,
-    format: 'cjs',
-    // minify: true,
+    keepNames: true
   }
 
   //
