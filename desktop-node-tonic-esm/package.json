@@ -2,9 +2,10 @@
   "name": "socket-sdk-tonic-desktop-example",
   "version": "1.0.0",
   "main": "main.js",
+  "type": "module",
   "scripts": {
-    "start": "ssc . -r",
-    "build": "ssc . -xd -p"
+    "start": "ssc compile -r .",
+    "build": "ssc copmile -xd -p ."
   },
   "devDependencies": {
     "clean-css": "^5.1.1",
@@ -14,7 +15,7 @@
   },
   "dependencies": {
     "@socketsupply/components": "^13.0.0",
-    "@socketsupply/ssc-node": "1.7.1",
+    "@socketsupply/ssc-node": "1.8.1",
     "@socketsupply/tonic": "^14.0.0"
   }
 }
