@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@socketsupply/components": "^13.0.0",
-    "@socketsupply/ssc-node": "1.8.1",
+    "@socketsupply/ssc-node": "1.8.2",
     "@socketsupply/tonic": "^14.0.0"
   }
 }
