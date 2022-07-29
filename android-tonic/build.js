@@ -1,14 +1,9 @@
 #!/usr/bin/env node
-//
-// This example script will copy css and other files into the build directory.
-// It will also watch for changes and copy them when they are made. As a bonus
-// it adds static imports to the css compiler, just for fun.
-//
-const path = require('path')
-const fs = require('fs/promises')
+import path from 'node:path'
+import fs from 'node:fs/promises'
 
-const Minifier = require('clean-css')
-const esbuild = require('esbuild')
+import Minifier from 'clean-css'
+import esbuild from 'esbuild'
 
 const minifier = new Minifier({ advanced: true })
 
@@ -37,13 +32,9 @@ const cp = async (a, b) => fs.cp(
 )
 
 async function copy (target) {
-  //
-  // We want compile time @import so we can organize and
-  // minify non-component styles.
-  //
   await css(
-    path.join('src', 'index.css'),
-    path.join(target, 'bundle.css')
+    path.join('src', 'styles', 'index.css'),
+    path.join(target, 'index.css')
   )
 
   //
@@ -52,13 +43,16 @@ async function copy (target) {
   await cp('src/index.html', target)
   await cp(`src/icons/icon.png`, target)
   await cp('src/images', target)
+  // await cp(`src/icons/icon.png`, target)
 }
 
 async function main () {
   const params = {
     entryPoints: ['src/index.js'],
+    format: 'esm',
     bundle: true,
-    keepNames: true
+    keepNames: true,
+    platform: 'browser',
   }
 
   //
@@ -73,21 +67,21 @@ async function main () {
 
   if (target) {
     target = path.resolve(target.split('=')[1])
-
-    params.outfile = path.join(target, 'bundle.js')
     esbuild.serve({ servedir: target }, params)
   } else {
-    target = path.resolve(process.argv[2])
-    params.outfile = path.join(target, 'bundle.js')
-    await esbuild.build(params)
+    params.outdir = path.resolve(process.argv[2])
+    //await esbuild.build({ ...params, minify: true })
+    await esbuild.build({ ...params })
   }
 
-  if (!target) {
+  console.log(params)
+
+  if (!params.outdir) {
     console.log('Did not receive the build target path as an argument!')
     process.exit(1)
   }
 
-  copy(target)
+  copy(params.outdir)
 }
 
 main()

@@ -2,6 +2,7 @@
   "name": "socket-sdk-android-example",
   "version": "1.0.0",
   "main": "main.js",
+  "type": "module",
   "devDependencies": {
     "clean-css": "^5.1.1",
     "esbuild": "^0.14.38",

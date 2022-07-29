@@ -1,8 +1,10 @@
 import Tonic from '@socketsupply/tonic'
 import * as io from '@socketsupply/io'
+import { readFile } from '@socketsupply/io/fs/index.js'
+
+io.ipc.debug.enabled = false
 
 window.io = io
-console.log(window.io.os.arch())
 
 class AppContainer extends Tonic {
   async click (e) {
