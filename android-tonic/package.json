@@ -10,7 +10,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@socketsupply/io": "github:socketsupply/io#18e8fe74bccfcd7a358682b8a73262ff933b8eae",
+    "@socketsupply/io": "github:socketsupply/io#master",
     "@socketsupply/tonic": "^14.1.5"
   }
 }
