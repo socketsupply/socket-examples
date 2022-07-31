@@ -1,0 +1,16 @@
+{
+  "name": "socket-sdk-android-example",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "devDependencies": {
+    "clean-css": "^5.1.1",
+    "esbuild": "^0.14.38",
+    "stylus": "^0.54.8"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@socketsupply/io": "github:socketsupply/io#18e8fe74bccfcd7a358682b8a73262ff933b8eae",
+    "@socketsupply/tonic": "^14.1.5"
+  }
+}
