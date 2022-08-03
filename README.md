@@ -1,7 +1,7 @@
 # Socket SDK Example Projects
 
 This repository contains example projects powered by the
-[Socket SDK](https://socket-sdk.dev) which helps you build lean, fast,
+[Socket SDK](https://sockets.sh/) which helps you build lean, fast,
 cross-platform apps for desktop and mobile, using the web technologies
 you already know.
 
