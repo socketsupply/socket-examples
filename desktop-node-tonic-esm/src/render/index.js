@@ -6,7 +6,7 @@ import Components from '@socketsupply/components'
 
 Components(Tonic)
 
-const isTest = process.argv.includes('--test=1')
+const isTest = process.argv.includes('--run-arg=test')
 
 let elementDraggingIndicator
 let elementUnderDrag
