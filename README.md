@@ -8,13 +8,18 @@ you already know.
 ## Desktop Examples
 
 - [React Desktop Example](desktop-node-react)
-- [Tonic Desktop Example](desktop-node-tonic)
+- [Tonic Desktop CommonJS Example](desktop-node-tonic-cjs)
+- [Tonic Desktop ESM Example](desktop-node-tonic-esm)
 - [Kotlin/Native & Kotlin.js Desktop Example](desktop-kotlin-kotlinjs)
 
 ## iOS Examples
 
 - [Tonic iOS Example](ios-tonic)
 - [DNS Lookup iOS Example](ios-tonic--dns-lookup)
+
+## Android examples
+
+- [Tonic Android example](android-tonic)
 
 ## Support
 
