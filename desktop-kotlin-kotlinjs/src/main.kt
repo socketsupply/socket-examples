@@ -38,8 +38,6 @@ fun main () {
   val cwd = ipc.cwd()
 
   if (cwd != null) {
-    ipc.navigate("file://$cwd/index.html")
     ipc.title("Socket SDK Kotlin/Native %26 Kotlin.js Example")
-    ipc.show(index = 0)
   }
 }

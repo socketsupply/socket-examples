@@ -2,8 +2,6 @@ import { dirname, join } from 'path';
 import system from '@socketsupply/ssc-node';
 
 async function main () {
-  await system.show({ window: 0 });
-
   const screen = await system.getScreenSize();
 
   await system.setSize({
@@ -16,10 +14,6 @@ async function main () {
     window: 0,
     value: 'React App',
   });
-
-  const resourcesDirectory = dirname(process.argv[1]);
-  const file = join(resourcesDirectory, 'index.html');
-  await system.navigate({ window: 0, value: `file://${file}` });
 
   let counter = 0;
 
