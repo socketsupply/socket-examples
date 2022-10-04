@@ -1,4 +1,4 @@
-import { dns } from '@socketsupply/io';
+import dns from '@socketsupply/io/dns.js';
 
 const results = document.querySelector('#results');
 const input = document.querySelector('#hostname');
@@ -15,7 +15,7 @@ document.querySelector('#lookup').addEventListener('click', e => {
   }, 100);
   dns.lookup(input.value, (err, address) => {
     clearInterval(interval);
-    results.innerHTML = err ? err.message : address;
+    results.innerHTML = err ? err.message : JSON.stringify(address);
   });
   e.preventDefault();
 });

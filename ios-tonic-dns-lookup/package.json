@@ -7,7 +7,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@socketsupply/io": "github:socketsupply/io#esm"
+    "@socketsupply/io": "github:socketsupply/io"
   },
   "scripts": {
     "start": "ssc compile --platform=iossimulator -r ."
