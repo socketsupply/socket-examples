@@ -49,7 +49,8 @@ class TestCommon {
     this.container = null
   }
 }
-module.exports = TestCommon
+
+export default TestCommon
 
 async function sleep (ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
