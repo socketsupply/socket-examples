@@ -84,6 +84,8 @@ npm test -- --test=test.js .
 ### compile tests
 The `ssc compile` command takes an argument `--test`. If you pass `--test`, then the app will be compiled with tests, which are defined in `./build.js`
 
+This will build all the test files located in the test directory, here `./test/`. That way we can compile the application, then you can run any of the tests without needing to re-compile. Also, test filenames should not conflict with the application code filenames.
+
 ```js
 const isTest = process.argv.some(str => str.includes('--test'))
 if (isTest) {
