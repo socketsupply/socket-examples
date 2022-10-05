@@ -6,12 +6,12 @@ A minimal example of an application made with `ssc`.
 
 Compile and run:
 ```
-ssc compile -r
+ssc compile -r .
 ```
 
 Compile and run, but just re-bundle the JS, not full re-compile:
 ```
-ssc compile -r -o
+ssc compile -r -o .
 ```
 
 ## hello world
