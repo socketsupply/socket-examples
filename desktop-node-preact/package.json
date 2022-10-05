@@ -1,0 +1,39 @@
+{
+  "name": "ssc-hello",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "ssc compile -r",
+    "build": "ssc compile",
+    "build-test": "ssc compile --test",
+    "test": "ssc compile -r --test"
+  },
+  "dependencies": {
+    "@socketsupply/ssc-node": "^1.8.2",
+    "htm": "^3.1.1",
+    "preact": "^10.10.6"
+  },
+  "devDependencies": {
+    "@socketsupply/test-dom": "github:socketsupply/test-dom",
+    "esbuild": "^0.15.6",
+    "glob": "^8.0.3",
+    "tapzero": "^0.6.1"
+  },
+  "author": "nichoth",
+  "license": "ISC",
+  "description": "A minimal example of an application made with `ssc`.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socketsupply/ssc-hello.git"
+  },
+  "keywords": [
+    "ssc"
+  ],
+  "bugs": {
+    "url": "https://github.com/socketsupply/ssc-hello/issues"
+  },
+  "homepage": "https://github.com/socketsupply/ssc-hello#readme"
+}
