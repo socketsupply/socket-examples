@@ -13,7 +13,7 @@ async function main () {
   // ## Example
   // Show one of the windows
   //
-  await system.show({ window: 0 })
+  // await system.show({ window: 0 })
   // await system.show({ window: 1 })
 
   //
@@ -37,9 +37,9 @@ async function main () {
   // ## Example
   // Navigate from the current location
   //
-  const resourcesDirectory = path.dirname(process.argv[1])
-  const file = path.join(resourcesDirectory, 'index.html')
-  await system.navigate({ window: 0, value: `file://${file}` })
+  // const resourcesDirectory = path.dirname(process.argv[1])
+  // const file = path.join(resourcesDirectory, 'index.html')
+  // await system.navigate({ window: 0, value: `file://${file}` })
   // await system.navigate({ window: 1, value: `file://${file}` })
 
   // await system.setSize({ window: 0, width: 200, height: 200 })
