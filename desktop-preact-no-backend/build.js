@@ -24,16 +24,6 @@ async function main () {
     platform: 'browser'
   })
 
-  await esbuild.build({
-    entryPoints: ['src/main/index.js'],
-    bundle: true,
-    keepNames: true,
-    // minify: true,
-    format: 'cjs',
-    outfile: path.join(target, 'main.js'),
-    platform: 'node'
-  })
-
   const debug = process.argv.includes('--debug')
 
   const isTest = process.argv.some(str => str.includes('--test'))
