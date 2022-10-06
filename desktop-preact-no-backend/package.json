@@ -9,7 +9,6 @@
     "test": "ssc compile -r --test"
   },
   "dependencies": {
-    "@socketsupply/ssc-node": "^1.8.2",
     "htm": "^3.1.1",
     "preact": "^10.10.6"
   },

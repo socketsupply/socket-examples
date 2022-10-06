@@ -4,6 +4,13 @@
 import { render } from 'preact';
 import { html } from 'htm/preact';
 
+window.resizeTo(
+    Math.min(1440, window.screen.width * 0.80),
+    Math.min(900, window.screen.height * 0.80)
+)
+
+window.parent.setTitle('Data')
+
 function demonstration () {
     return html`<div class="demo">
         <h1>hello, world</h1>
