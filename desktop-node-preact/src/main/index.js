@@ -66,6 +66,13 @@ async function main () {
             return { mode: last }
         }
 
+        //
+        // the only other option is to cycle the beeper, so if we haven't
+        // returned by now, then we call `beeper`
+        // In a real application, you would probably want a more robust
+        // protocol for RPC
+        //
+
         // write the data to disk, and get the next state
         const newMode = await fns.beeper(value)
 
