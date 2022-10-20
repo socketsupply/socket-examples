@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "ssc . -r",
-    "build": "ssc . -xd -p"
+    "start": "ssc build -r",
+    "build": "ssc build -p"
   },
   "devDependencies": {
     "esbuild": "^0.14.39"

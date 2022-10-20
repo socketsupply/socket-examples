@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "ssc . -ios -simulator -r",
-    "build": "ssc . -c -p",
-    "watch": "ssc . -r --port=8000 & ./build.js --watch=`ssc . --target`"
+    "start": "ssc build --platform=ios-simulator -r",
+    "build": "ssc build -c -p"
   },
   "devDependencies": {
     "clean-css": "^5.1.1",
