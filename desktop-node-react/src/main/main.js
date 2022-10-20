@@ -1,4 +1,3 @@
-import { dirname, join } from 'path';
 import system from '@socketsupply/ssc-node';
 
 async function main () {
