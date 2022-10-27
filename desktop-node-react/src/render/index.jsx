@@ -11,6 +11,10 @@ window.addEventListener('process-error', async ({ detail }) => {
   console.log('process-error', detail)
 })
 
+window.parent.setTitle('React app')
+
+window._ipc.send('process.open')
+
 
 const root = createRoot(document.getElementById('root'))
 root.render(

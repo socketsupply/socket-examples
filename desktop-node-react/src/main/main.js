@@ -1,19 +1,6 @@
 import system from '@socketsupply/ssc-node';
 
 async function main () {
-  const screen = await system.getScreenSize();
-
-  await system.setSize({
-    window: 0,
-    height: Math.min(900, screen.height * 0.80),
-    width: Math.min(1440, screen.width * 0.80),
-  });
-
-  await system.setTitle({
-    window: 0,
-    value: 'React App',
-  });
-
   let counter = 0;
 
   function increaseCounterAndSendMessage(type) {
