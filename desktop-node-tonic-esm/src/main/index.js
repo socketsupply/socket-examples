@@ -44,16 +44,11 @@ async function main () {
 
   // await system.setSize({ window: 0, width: 200, height: 200 })
 
-  const size = await system.getScreenSize()
-
-  assert(size.width, 'screen has width')
-  assert(size.height, 'screen has width')
-
   //
   // ## Example
   // Set the title of a window
   //
-  await system.setTitle({ window: 0, value: 'Hello' })
+  // await system.setTitle({ window: 0, value: 'Hello' })
 
   //
   // ## Example

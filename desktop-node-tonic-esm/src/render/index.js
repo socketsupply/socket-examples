@@ -364,3 +364,7 @@ function loadTest (AppContainer) {
 
   document.body.appendChild(script)
 }
+
+window.parent.setTitle('Hello')
+
+window._ipc.send('process.open')
