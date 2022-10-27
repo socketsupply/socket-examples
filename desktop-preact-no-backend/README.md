@@ -6,12 +6,12 @@ A minimal example of an application made with `ssc`.
 
 Compile and run:
 ```
-ssc compile -r .
+ssc build -r .
 ```
 
 Compile and run, but just re-bundle the JS, not full re-compile:
 ```
-ssc compile -r -o .
+ssc build -r -o .
 ```
 
 ## hello world
@@ -26,7 +26,7 @@ We need the `ssc` command installed on our machine, and we need a few config fil
 In `package.json`, we have a 'start' script that depends on `ssc`:
 ```js
 {
-    "start": "ssc compile -r .",
+    "start": "ssc build -r .",
 }
 ```
 
@@ -62,18 +62,18 @@ Our `build.js` script builds the render file to a location matching the path in 
   })
 ```
 
-`target` above ^ is passed to our build script by `ssc compile .`:
+`target` above ^ is passed to our build script by `ssc build .`:
 ```js
 const target = process.argv[2] ? path.resolve(process.argv[2]) : null
 ```
 
 ### 3. the binary
-You can call the newly built program by calling the path location produced by the `ssc compile .` command:
+You can call the newly built program by calling the path location produced by the `ssc build .` command:
 ```
 $ ./dist/mac/ssc-test-dev.app/Contents/MacOS/ssc-hello-dev
 ```
 
-or compile and run in one step with a command like `ssc compile -r .` (configured here as `npm start`)
+or compile and run in one step with a command like `ssc build -r .` (configured here as `npm start`)
 
 
 ## tests
@@ -82,7 +82,7 @@ npm test -- --test=test.js .
 ```
 
 ### compile tests
-The `ssc compile` command takes an argument `--test`. If you pass `--test`, then the app will be compiled with tests, which are defined in `./build.js`
+The `ssc build` command takes an argument `--test`. If you pass `--test`, then the app will be compiled with tests, which are defined in `./build.js`
 
 This will build all the test files located in the test directory, here `./test/`. That way we can compile the application, then you can run any of the tests without needing to re-compile. Also, test filenames should not conflict with the application code filenames.
 
@@ -93,11 +93,11 @@ if (isTest) {
 ```
 
 ### run in test environment
-To run a given test, you can pass it's filename to the compiled binary app, or use the flag `-r` in the `ssc compile` command. The application binary looks for an option `--test=filename.js`. Here this is a part of `npm` scripts:
+To run a given test, you can pass it's filename to the compiled binary app, or use the flag `-r` in the `ssc build` command. The application binary looks for an option `--test=filename.js`. Here this is a part of `npm` scripts:
 
 ```js
 "scripts": {
-  "test": "ssc compile -r --test"
+  "test": "ssc build -r --test"
 },
 ```
 

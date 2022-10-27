@@ -4,8 +4,8 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start": "ssc compile -r .",
-    "build": "ssc copmile -xd -p ."
+    "start": "ssc build -r .",
+    "build": "ssc build -xd -p ."
   },
   "devDependencies": {
     "clean-css": "^5.1.1",

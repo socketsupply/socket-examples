@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "ssc compile -r",
-    "build": "ssc compile",
-    "build-test": "ssc compile --test",
-    "test": "ssc compile -r --test"
+    "start": "ssc build -r",
+    "build": "ssc build",
+    "build-test": "ssc build --test",
+    "test": "ssc build -r --test"
   },
   "dependencies": {
     "htm": "^3.1.1",

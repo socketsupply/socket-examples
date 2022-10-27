@@ -18,7 +18,7 @@ npm install
 Build the application and run it with `ssc`:
 
 ```sh
-ssc compile -r -o .
+ssc build -r -o .
 ```
 
 Or with `npm`:

@@ -10,7 +10,7 @@ From this directory:
 npm start
 ```
 
-`npm start` will run two commands: `npm run build-js && ssc compile -r .` 
+`npm start` will run two commands: `npm run build-js && ssc build -r .` 
 
 Building the app happens in two discrete steps. First we build a standard browser app to the `public` directory. We are using `esbuild` to do this. Then `ssc.config` is configured with
 ```
@@ -18,7 +18,7 @@ input: public
 output: dist
 ```
 
-So the command `ssc compile .` will the take the browser app in `public`, and build a desktop app to the `dist` folder.
+So the command `ssc build .` will the take the browser app in `public`, and build a desktop app to the `dist` folder.
 
 ## structure
 

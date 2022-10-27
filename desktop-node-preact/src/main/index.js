@@ -2,7 +2,6 @@
 'use strict'
 
 const { system } = require('@socketsupply/ssc-node')
-const path = require('path')
 const fs = require('node:fs/promises')
 const untildify = require('untildify');
 
@@ -20,11 +19,16 @@ const fns = {
     },
 
     getLastState: async function () {
-        const content = await fs.readFile(
-            untildify('~/ssc-beep-data.txt'),
-            'utf8'
-        )
-        return content
+        try {
+            const content = await fs.readFile(
+                untildify('~/ssc-beep-data.txt'),
+                'utf8'
+            )
+            return content
+        } catch (err) {
+            // file does not exist
+            return 'beep'
+        }
     }
 }
 
