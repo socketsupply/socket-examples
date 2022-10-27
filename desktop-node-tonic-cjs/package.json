@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "ssc compile -r .",
-    "build": "ssc compile -xd -p ."
+    "start": "ssc build -r .",
+    "build": "ssc build -xd -p ."
   },
   "devDependencies": {
     "clean-css": "^5.1.1",

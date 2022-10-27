@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm run build-js && ssc compile -r .",
-    "build": "npm run build-js && ssc compile .",
-    "build-test": "npm run build-js && ssc compile --test .",
+    "start": "npm run build-js && ssc build -r .",
+    "build": "npm run build-js && ssc build .",
+    "build-test": "npm run build-js && ssc build --test .",
     "build-js": "node ./build.js",
-    "test": "node ./build.js --test && ssc compile -r --test"
+    "test": "node ./build.js --test && ssc build -r --test"
   },
   "dependencies": {
     "@socketsupply/ssc-node": "^1.8.2",
