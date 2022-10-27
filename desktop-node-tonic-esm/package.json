@@ -1,5 +1,5 @@
 {
-  "name": "socket-sdk-tonic-desktop-example",
+  "name": "socket-tonic-desktop-example",
   "version": "1.0.0",
   "main": "main.js",
   "type": "module",

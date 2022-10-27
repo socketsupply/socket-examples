@@ -8,7 +8,7 @@ You will need [Xcode](https://developer.apple.com/xcode/resources/) installed.
 
 1. Clone the repo.
 ```bash
-git clone git@github.com:socketsupply/socket-sdk-examples.git
+git clone git@github.com:socketsupply/socket-examples.git
 ```
 2. Open the React desktop example directory.
 ```bash

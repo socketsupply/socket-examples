@@ -1,8 +1,8 @@
 {
-  "name": "socket-sdk-kotlin-native-example",
+  "name": "socket-kotlin-native-example",
   "version": "1.0.0",
   "private": true,
-  "description": "A Socket SDK example application that uses Kotlin/Native and Kotlin.js.",
+  "description": "A Socket Runtime example application that uses Kotlin/Native and Kotlin.js.",
   "main": "src/index.js",
   "scripts": {
     "start": "ssc compile -r -o .",

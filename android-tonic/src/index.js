@@ -19,7 +19,7 @@ class AppContainer extends Tonic {
   render () {
     return this.html`
       <img src="images/nav-logo.svg">
-      <h3>Read more about Socket SDK for Android at <a href="https://socket-sdk.dev/Android">https://socket-sdk.dev/android</a></h3>
+      <h3>Read more about Socket SDK for Android at <a href="https://sockets.sh">https://sockets.sh</a></h3>
     `
   }
 }

@@ -3,7 +3,7 @@ Socket SDK Kotlin/Native & Kotlin.js Example
 
 ## Prerequisites
 
-- [Socket SDK](https://github.com/socket-sdk)
+- [Socket SDK](https://github.com/socket)
 - `kotlinc-js`
 - `kotlinc-native`
 

@@ -6,7 +6,7 @@ This app uses [ssc-node](https://github.com/socketsupply/ssc-node) as a backend 
 
 1. Clone the repo.
 ```bash
-git clone git@github.com:socketsupply/socket-sdk-examples.git
+git clone git@github.com:socketsupply/socket-examples.git
 ```
 2. Open the React desktop example directory.
 ```bash
