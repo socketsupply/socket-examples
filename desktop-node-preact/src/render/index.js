@@ -46,4 +46,8 @@ if (testArg) {
     document.body.appendChild(script)
 }
 
+window.parent.setTitle('wooo')
+
+window._ipc.send('process.open')
+
 render(html`<${Demonstration} />`, document.body)
