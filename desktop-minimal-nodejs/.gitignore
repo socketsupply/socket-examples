@@ -13,6 +13,7 @@ node_modules/
 
 # Default output directory
 build/
+dist/
 
 # Provisioning profile
 *.mobileprovision
