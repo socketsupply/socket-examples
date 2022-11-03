@@ -1,0 +1,10 @@
+
+<body style="display: grid; justify-content: center; align-content: center; font-family: helvetica;">
+  <h1>Hello, World.</h1>
+<script type="module">
+  window.addEventListener('process-error', ({ detail }) => console.error(detail))
+  window._ipc.send('process.open');
+  window.addEventListener('hello', ({ detail }) => {
+    document.querySelector('h1').innerText += detail;
+  });
+</script>

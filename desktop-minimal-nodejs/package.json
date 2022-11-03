@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@socketsupply/ssc-node": "^1.8.2"
+  }
+}
