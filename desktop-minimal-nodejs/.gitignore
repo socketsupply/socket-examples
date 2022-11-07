@@ -17,3 +17,8 @@ dist/
 
 # Provisioning profile
 *.mobileprovision
+
+/node-v18.12.1-darwin-x64.tar.gz
+/node-v18.12.1-darwin-x64/
+/node
+/npm
