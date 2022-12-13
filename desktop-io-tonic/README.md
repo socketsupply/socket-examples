@@ -6,7 +6,7 @@ __Featuring__
 * no 'backend' -- everything happens in a single process. We are able to factor things this way because we `import` the `io` module into our 'frontend' code, so there's no need to think about IPC
 
 ## build
-Building this app happens in two discrete steps. First we create a single page app by bundling some code with `esbuild`. This is like buidling a standard browser JS app.
+Building this app happens in two discrete steps. First we create a single page app by bundling some code with `esbuild`. This is like building a standard browser JS app.
 
 Then we call `ssc build .`. This creates a desktop-specific binary file from the single page JS app we just built. You can run this app without a browser.
 
