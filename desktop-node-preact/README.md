@@ -20,7 +20,10 @@ output: dist
 So the command `ssc build .` will the take the browser app in `public`, and build a desktop app to the `dist` folder.
 
 ### build
-Note there is no `build` script in `ssc.config`: 
+
+> **Note**
+> there is no `build` script in `ssc.config`:
+
 ```
 #
 # Build Settings
