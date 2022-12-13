@@ -1,0 +1,29 @@
+{
+  "name": "@socketsupply/example-io",
+  "version": "0.0.0",
+  "description": "IO example",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run build-js && ssc build -r .",
+    "build": "mkdir -p public && cp src/index.html public && cp src/style.css public && npm run build-js",
+    "build-js": "mkdir -p ./public && esbuild src/index.js --bundle --outfile=public/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@socketsupply/io": "github:socketsupply/io",
+    "@socketsupply/tonic": "^14.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socketsupply/example-io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/socketsupply/example-io/issues"
+  },
+  "homepage": "https://github.com/socketsupply/example-io#readme",
+  "devDependencies": {
+    "esbuild": "^0.16.4"
+  }
+}
