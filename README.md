@@ -11,7 +11,7 @@ you already know.
 - [Tonic Desktop CommonJS Example](desktop-node-tonic-cjs)
 - [Tonic Desktop ESM Example](desktop-node-tonic-esm)
 - [Kotlin/Native & Kotlin.js Desktop Example](desktop-kotlin-kotlinjs)
-- [Preact Desktop Example](desktop-node-preact)
+- [Preact Desktop Example](desktop-preact-no-backend)
 - [Preact Desktop + Node Example](desktop-node-preact)
 
 ## iOS Examples
