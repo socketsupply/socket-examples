@@ -16,8 +16,7 @@ This is defined in the `package.json` script `start`:
   "scripts": {
     "start": "npm run build && ssc build -r .",
     "build": "mkdir -p public && cp src/index.html public && cp src/style.css public && npm run build-js",
-    "build-js": "mkdir -p ./public && esbuild src/index.js --bundle --outfile=public/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-js": "mkdir -p ./public && esbuild src/index.js --bundle --outfile=public/bundle.js"
   },
 }
 ```
