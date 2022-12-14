@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && ssc build -r .",
-    "build": "mkdir -p public && rm -rf public/* && cp src/index.html public && cp src/style.css public && npm run build-js",
+    "build": "mkdir -p public && rm -rf dist/* public/* && cp src/index.html public && cp src/style.css public && npm run build-js",
     "build-js": "mkdir -p ./public && esbuild src/index.js --bundle --outfile=public/bundle.js",
     "build-tests": "esbuild test/test.js --bundle --outfile=public/test.js",
     "test": "npm run build && npm run build-tests && ssc build --test=test.js --headless -r -o . | tap-arc"
