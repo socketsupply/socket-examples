@@ -1,5 +1,6 @@
 {
   "name": "@socketsupply/example-io",
+  "type": "module",
   "version": "0.0.0",
   "description": "IO example",
   "main": "index.js",
@@ -7,7 +8,8 @@
     "start": "npm run build && ssc build -r .",
     "build": "mkdir -p public && cp src/index.html public && cp src/style.css public && npm run build-js",
     "build-js": "mkdir -p ./public && esbuild src/index.js --bundle --outfile=public/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-tests": "esbuild test/test.js --bundle --outfile=public/test.js",
+    "test": "npm run build && npm run build-tests && ssc build --test=test.js --headless -r -o . | tap-arc"
   },
   "dependencies": {
     "@socketsupply/io": "github:socketsupply/io",
@@ -24,6 +26,10 @@
   },
   "homepage": "https://github.com/socketsupply/example-io#readme",
   "devDependencies": {
-    "esbuild": "^0.16.4"
+    "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
+    "@socketsupply/test-dom": "^0.5.0",
+    "esbuild": "^0.16.4",
+    "tap-arc": "^0.3.5",
+    "tapzero": "^0.6.1"
   }
 }

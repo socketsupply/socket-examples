@@ -2,6 +2,7 @@
 'use strict'
 
 import Tonic from '@socketsupply/tonic'
+import addTest from '@socketsupply/ssc-test'
 import * as fs from '@socketsupply/io/fs.js'
 import * as os from '@socketsupply/io/os.js'
 
@@ -63,4 +64,5 @@ Tonic.add(AppContainer)
 window.onload = async () => {
     const app = await AppContainer.create()
     document.body.appendChild(app)
+    addTest()
 }
