@@ -1,6 +1,6 @@
 desktop-node-preact/public
 desktop-node-preact/dist
 node_modules
-desktop-io-tonic/dist
+io-tonic/dist
+io-tonic/public
 
-desktop-io-tonic/public
