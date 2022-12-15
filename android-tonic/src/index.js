@@ -1,6 +1,5 @@
 import Tonic from '@socketsupply/tonic'
 import * as io from '@socketsupply/io'
-import { readFile } from '@socketsupply/io/fs/index.js'
 
 io.ipc.debug.enabled = false
 
@@ -11,7 +10,7 @@ class AppContainer extends Tonic {
     const anchor = Tonic.match(e.target, 'a')
 
     if (anchor) {
-      window.system.openExternal(anchor.href)
+      io.runtime.openExternal(anchor.href)
       e.stopPropagation()
       return
     }

@@ -3,18 +3,14 @@
 package co.socketsupply.android.example
 import co.socketsupply.android.example.*
 
-public open class ExampleAndroidActivity : WebViewActivity() {
+public open class ExampleMainActivity : MainActivity() {
   override protected val TAG = "ExampleAndroidActivity";
 
   override fun onCreate (state: android.os.Bundle?) {
     super.onCreate(state);
 
-    val core = this.core
-
-    if (core != null) {
-      android.util.Log.d(TAG, core.helloWorld());
-    }
+    android.util.Log.d(TAG, this.helloWorld());
   }
-}
 
-external fun NativeCore.helloWorld(): String;
+  external fun helloWorld (): String;
+}

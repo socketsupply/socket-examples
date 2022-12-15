@@ -1,7 +1,7 @@
-#include "android.hh"
+#include "android/internal.hh"
 
 extern "C" {
-  jstring exports(custom, helloWorld)(
+  jstring external(ExampleMainActivity, helloWorld)(
     JNIEnv *env,
     jobject self
   ){
