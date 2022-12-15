@@ -15,7 +15,7 @@ This is defined in the `package.json` script `start`:
 {
   "scripts": {
     "start": "npm run build && ssc build -r .",
-    "build": "mkdir -p public && cp src/index.html public && cp src/style.css public && npm run build-js",
+    "build": "mkdir -p public && rm -rf dist/* public/* && cp src/index.html public && cp src/style.css public && npm run build-js",
     "build-js": "mkdir -p ./public && esbuild src/index.js --bundle --outfile=public/bundle.js"
   },
 }
