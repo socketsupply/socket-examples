@@ -51,7 +51,7 @@ class AppContainer extends Tonic {
     render () {
         return this.html`
             <p>hello, world</p>
-            <div>count: ${'' + this.state.n}</div>
+            <p>count: ${'' + this.state.n}</p>
             <div>
                 <button class="plus">plus one</button>
             </div>
