@@ -3,6 +3,7 @@
 
 const Tonic = require('@socketsupply/tonic')
 const Components = require('@socketsupply/components')
+const io = require('@socketsupply/io')
 
 Components(Tonic)
 
@@ -12,12 +13,13 @@ let elementDraggingIndicator
 let elementUnderDrag
 let lastElementUnderDrag
 
-function setBackgroundColor () {
+function setBackgroundColor() {
   const styles = getComputedStyle(document.body)
   let hex = styles.getPropertyValue('--tonic-window').slice(1)
   let [red, green = red, blue = green] = hex.match(/\w\w/g).map(s => parseInt(s, 16))
 
-  window.parent.setBackgroundColor({ red, green, blue, alpha: 1 })
+  // TODO window.parent not working
+  // window.parent.setBackgroundColor({ red, green, blue, alpha: 1 })
 }
 
 window.matchMedia("(prefers-color-scheme: dark)")
@@ -53,8 +55,8 @@ window.addEventListener('drag', e => {
   const { x, y, inbound } = e.detail
   elementDraggingIndicator.style.display = inbound ? 'none' : 'block'
 
-  elementDraggingIndicator.style.left = `${x+8}px`
-  elementDraggingIndicator.style.top = `${y+8}px`
+  elementDraggingIndicator.style.left = `${x + 8}px`
+  elementDraggingIndicator.style.top = `${y + 8}px`
   elementDraggingIndicator.innerText = e.detail.count
 
   elementUnderDrag = document.elementFromPoint(x, y)
@@ -152,7 +154,7 @@ window.addEventListener('click', async event => {
 // Create some arbitrary components with our nifty component framework.
 //
 class AppHeader extends Tonic {
-  render () {
+  render() {
     return this.html`
       <h1>${this.props.message}</h1>
     `
@@ -162,7 +164,7 @@ class AppHeader extends Tonic {
 Tonic.add(AppHeader)
 
 class AppContainer extends Tonic {
-  constructor () {
+  constructor() {
     super()
 
     //
@@ -173,7 +175,7 @@ class AppContainer extends Tonic {
     })
   }
 
-  onData (event) {
+  onData(event) {
     if (event.detail.env) {
       console.log(event)
       return
@@ -188,7 +190,7 @@ class AppContainer extends Tonic {
     AppContainer.setHeader(`${event.detail.counter} messages received`)
   }
 
-  static setHeader (message) {
+  static setHeader(message) {
     const appHeader = document.querySelector('app-header')
     if (!appHeader) return
 
@@ -197,7 +199,7 @@ class AppContainer extends Tonic {
     })
   }
 
-  async click (e) {
+  async click(e) {
     const el = Tonic.match(e.target, '[data-event]')
     if (!el) return
 
@@ -228,7 +230,7 @@ class AppContainer extends Tonic {
     }
   }
 
-  async input (e) {
+  async input(e) {
     const el = Tonic.match(e.target, 'tonic-input')
     if (!el) return
 
@@ -250,14 +252,14 @@ class AppContainer extends Tonic {
     return // system.setTitle({ e.target.value)
   }
 
-  async mouseup (e) {
+  async mouseup(e) {
     // implement your own drag and drop logic
     if (e.target.id === 'drop-demo') {
       console.log('drop')
     }
   }
 
-  async contextmenu (e) {
+  async contextmenu(e) {
     const el = Tonic.match(e.target, '.context-menu')
     if (!el) return
 
@@ -279,7 +281,7 @@ class AppContainer extends Tonic {
     }
   }
 
-  async render () {
+  async render() {
     return this.html`
       <app-header>
       </app-header>
@@ -349,7 +351,7 @@ window.onload = () => {
   document.body.appendChild(app)
 }
 
-function loadTest (AppContainer) {
+function loadTest(AppContainer) {
   //
   // We have two bundles, src & test. to avoid duplicate classes
   // shared between two bundles, expose important things as global
@@ -364,7 +366,7 @@ function loadTest (AppContainer) {
 
   document.body.appendChild(script)
 }
+// TODO window.parent not working
+// window.parent.setTitle('Hello')
 
-window.parent.setTitle('Hello')
-
-window._ipc.send('process.open')
+io.ipc.send('process.open')

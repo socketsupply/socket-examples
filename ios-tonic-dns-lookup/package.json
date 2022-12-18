@@ -10,7 +10,7 @@
     "@socketsupply/io": "github:socketsupply/io"
   },
   "scripts": {
-    "start": "ssc build --platform=iossimulator -r ."
+    "start": "ssc build --platform=ios-simulator -r ."
   },
   "devDependencies": {
     "esbuild": "^0.14.40"

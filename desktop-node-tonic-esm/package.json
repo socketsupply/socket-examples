@@ -14,6 +14,7 @@
     "esbuild": "^0.14.39"
   },
   "dependencies": {
+    "@socketsupply/io": "github:socketsupply/io#de4354655bfb7e624f17394123e0e79467af60f4",
     "@socketsupply/components": "^13.0.0",
     "@socketsupply/ssc-node": "1.8.1",
     "@socketsupply/tonic": "^14.0.0"

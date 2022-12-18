@@ -4,8 +4,9 @@
 import { render } from 'preact'
 import { html } from 'htm/preact'
 import { useState, useEffect } from 'preact/hooks'
+import * as io from '@socketsupply/io'
 
-function Demonstration () {
+function Demonstration() {
     const [mode, setMode] = useState(null)
 
     // component did mount
@@ -20,7 +21,7 @@ function Demonstration () {
     }, [])
 
     // this shows how to do IPC API calls
-    async function handleClick (ev) {
+    async function handleClick(ev) {
         ev.preventDefault()
         // @ts-ignore
         const res = await window.system.send({ mode })
@@ -46,8 +47,9 @@ if (testArg) {
     document.body.appendChild(script)
 }
 
-window.parent.setTitle('wooo')
+// TODO window.parent not working
+// window.parent.setTitle('wooo')
 
-window._ipc.send('process.open')
+io.ipc.send('process.open')
 
 render(html`<${Demonstration} />`, document.body)

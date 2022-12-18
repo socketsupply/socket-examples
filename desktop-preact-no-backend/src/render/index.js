@@ -9,9 +9,10 @@ window.resizeTo(
     Math.min(900, window.screen.height * 0.80)
 )
 
-window.parent.setTitle('Data')
+// TODO window.parent not working
+// window.parent.setTitle('Data')
 
-function demonstration () {
+function demonstration() {
     return html`<div class="demo">
         <h1>hello, world</h1>
         <a href="/hello">hello</a>
