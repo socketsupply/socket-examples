@@ -13,6 +13,9 @@ npm start
 
 Building this app happens in two discrete steps. First we create a single page app by bundling some code with `esbuild`. This is like building a standard browser JS app.
 
+**Note**
+There is no `build` script defined in `ssc.config`. This means that by default the `ssc` command will copy all files from the `input` directory to the `output` directory.
+
 Then we call `ssc build .`. This creates a desktop-specific binary file from the single page JS app we just built. You can run this app without a browser.
 
 This is defined in the `package.json` script `start`:
