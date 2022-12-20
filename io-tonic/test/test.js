@@ -3,7 +3,7 @@
 
 import { dom } from '@socketsupply/test-dom'
 import { test, GLOBAL_TEST_RUNNER } from 'tapzero'
-import '@socketsupply/io/runtime.js'
+import '@socketsupply/io/redirectOutput.js'
 
 const pollTimeout = setTimeout(function poll () {
   if (GLOBAL_TEST_RUNNER.completed) {
