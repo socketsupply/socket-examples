@@ -12,7 +12,7 @@
     "test": "npm run build && npm run build-tests && ssc build --test=test.js --headless -r -o . | tap-arc"
   },
   "dependencies": {
-    "@socketsupply/io": "github:socketsupply/io",
+    "@socketsupply/io": "github:socketsupply/io#ipc-cleanup",
     "@socketsupply/tonic": "^14.3.0"
   },
   "repository": {
