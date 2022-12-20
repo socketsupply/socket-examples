@@ -1,11 +1,19 @@
 // @ts-check
 'use strict'
-import testContext from '@socketsupply/ssc-test/test-context'
-import { dom } from '@socketsupply/test-dom'
-import tapzero from 'tapzero'
-const { test } = tapzero
 
-testContext(tapzero)
+import { dom } from '@socketsupply/test-dom'
+import { test, GLOBAL_TEST_RUNNER } from 'tapzero'
+import '@socketsupply/io/runtime.js'
+import { postMessage } from '@socketsupply/io/ipc.js'
+
+const pollTimeout = setTimeout(function poll () {
+  if (GLOBAL_TEST_RUNNER.completed) {
+    clearTimeout(pollTimeout)
+    postMessage('ipc://exit?value=0')
+  }
+
+  setTimeout(poll, 500)
+}, 500)
 
 test('example', async t => {
     t.ok('example')
