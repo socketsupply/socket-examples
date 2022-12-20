@@ -4,12 +4,11 @@
 import { dom } from '@socketsupply/test-dom'
 import { test, GLOBAL_TEST_RUNNER } from 'tapzero'
 import '@socketsupply/io/runtime.js'
-import { postMessage } from '@socketsupply/io/ipc.js'
 
 const pollTimeout = setTimeout(function poll () {
   if (GLOBAL_TEST_RUNNER.completed) {
     clearTimeout(pollTimeout)
-    postMessage('ipc://exit?value=0')
+    window.__ipc.postMessage('ipc://exit?value=0')
   }
 
   setTimeout(poll, 500)
