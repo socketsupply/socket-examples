@@ -5,23 +5,7 @@ This repository contains example projects powered by the
 cross-platform apps for desktop and mobile, using the web technologies
 you already know.
 
-## Desktop Examples
 
-- [React Desktop Example](desktop-node-react)
-- [Tonic Desktop CommonJS Example](desktop-node-tonic-cjs)
-- [Tonic Desktop ESM Example](desktop-node-tonic-esm)
-- [Kotlin/Native & Kotlin.js Desktop Example](desktop-kotlin-kotlinjs)
-- [Preact Desktop Example](desktop-preact-no-backend)
-- [Preact Desktop + Node Example](desktop-node-preact)
-
-## iOS Examples
-
-- [Tonic iOS Example](ios-tonic)
-- [DNS Lookup iOS Example](ios-tonic--dns-lookup)
-
-## Android examples
-
-- [Tonic Android example](android-tonic)
 
 ## Support
 

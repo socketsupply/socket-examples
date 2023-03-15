@@ -1,4 +1,3 @@
-desktop-node-preact/public
-desktop-node-preact/dist
-
 node_modules
+build
+dist
