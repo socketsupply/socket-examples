@@ -1,1 +1,1 @@
-This directory contains the examples of the existing apps wrapped into Socket runtime.
+This directory contains simple Socket Runtime app examples.
