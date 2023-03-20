@@ -5,21 +5,16 @@
 <script type="module">
   import fs from 'socket:fs/promises'
 
-  // const textarea = document.querySelector('textarea')
-  // const button = document.querySelector('button')
+  const textarea = document.querySelector('textarea')
+  const button = document.querySelector('button')
 
   try {
-    await fs.access('unexisting_file.txt')
-  } catch (e) {
-    console.log(e)
+    textarea.value = await fs.readFile('file.txt', 'utf-8')
+  } catch {
+    await fs.writeFile('file.txt', '')
   }
-  // try {
-    // textarea.value = await fs.readFile('file.txt', 'utf-8')
-  // } catch {
-    // await fs.writeFile('file.txt', '')
-  // }
 
-  // button.addEventListener('click', async () => {
-    // await fs.writeFile('file.txt', textarea.value)
-  // })
+  button.addEventListener('click', async () => {
+    await fs.writeFile('file.txt', textarea.value)
+  })
 </script>
