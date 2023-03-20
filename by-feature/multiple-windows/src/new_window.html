@@ -1,0 +1,9 @@
+<script type="module">
+  import application from 'socket:application'
+
+  const currentWindow = await application.getCurrentWindow()
+
+  currentWindow.on('ping', (event) => {
+    globalThis.document.body.innerHTML += 'ping<br>'
+  })
+</script>
