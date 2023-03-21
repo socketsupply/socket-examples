@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@socketsupply/ssc-node": "1.7.1",
+    "@w3ui/react-keyring": "^1.0.1",
+    "@w3ui/react-uploader": "^2.1.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   }
