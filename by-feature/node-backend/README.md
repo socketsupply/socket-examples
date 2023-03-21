@@ -16,7 +16,7 @@ cd by-feature/node-backend
 ```bash
 npm i
 ```
-4. Install the Socket SDK compiler following instructions [here](sockets.sh/docs/installation).
+4. Install the Socket SDK compiler following instructions [here](https://socketsupply.co/docs).
 5. Build and run the application with either `ssc build -r`, `npm start`, `pnpm start`, or `yarn start`.
 
 To run the app you need to have [Node.js](https://nodejs.org/en/) installed and available in your path.
