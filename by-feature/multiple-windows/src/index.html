@@ -1,0 +1,23 @@
+
+<body style="display: grid; justify-content: center; align-content: center; font-family: helvetica;">
+  <button>Send event</button>
+
+<script type="module">
+  import application from 'socket:application'
+
+  const button = document.querySelector('button')
+
+  const currentWindow = await application.getCurrentWindow()
+
+  const newWindow = await application.createWindow({
+    index: 1,
+    path: 'new_window.html',
+    title: 'New Window',
+    width: 400,
+    height: 400
+  })
+
+  button.addEventListener('click', () => {
+    currentWindow.send({ event: 'ping', window: 1 })
+  })
+</script>

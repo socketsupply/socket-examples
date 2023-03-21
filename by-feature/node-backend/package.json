@@ -1,0 +1,12 @@
+{
+  "name": "socket-tonic-desktop-example",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "ssc build -r -o"
+  },
+  "dependencies": {
+    "@socketsupply/socket-node": "0.1.0"
+  }
+}

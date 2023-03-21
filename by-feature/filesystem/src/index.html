@@ -1,0 +1,20 @@
+<textarea style="height: 200px; width: 400px;"></textarea>
+<hr>
+<button>save to file</button>
+
+<script type="module">
+  import fs from 'socket:fs/promises'
+
+  const textarea = document.querySelector('textarea')
+  const button = document.querySelector('button')
+
+  try {
+    textarea.value = await fs.readFile('file.txt', 'utf-8')
+  } catch {
+    await fs.writeFile('file.txt', '')
+  }
+
+  button.addEventListener('click', async () => {
+    await fs.writeFile('file.txt', textarea.value)
+  })
+</script>

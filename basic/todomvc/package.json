@@ -1,0 +1,16 @@
+{
+  "name": "todomvc",
+  "version": "0.1.0",
+  "scripts": {
+    "copy-base-js": "cp node_modules/todomvc-common/base.js src/base.js",
+    "copy-base-css": "cp node_modules/todomvc-common/base.css src/base.css",
+    "copy-app-css": "cp node_modules/todomvc-app-css/index.css src/index.css",
+    "postinstall": "npm run copy-base-js && npm run copy-base-css && npm run copy-app-css",
+    "start": "ssc build -r"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "todomvc-app-css": "^2.4.2",
+    "todomvc-common": "^1.0.5"
+  }
+}
