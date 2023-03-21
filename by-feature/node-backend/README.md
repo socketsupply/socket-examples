@@ -1,27 +1,25 @@
-# A Tonic example desktop app built with Socket SDK
+# A Socket Runtime desktop example with Node.js backend
 
-This app uses [ssc-node](https://github.com/socketsupply/ssc-node) as a backend and [Tonic](https://tonicframework.dev) code bundled with [esbuild](https://esbuild.github.io) for a frontend.
+This app uses [socket-node](https://github.com/socketsupply/socket-node) as a backend.
 
 # Build instructions
 
 1. Clone the repo.
 ```bash
-git clone git@github.com:socketsupply/op-examples.git
+git clone git@github.com:socketsupply/socket-examples.git
 ```
-2. Open the React desktop example directory.
+2. Open the Node backend example directory.
 ```bash
-cd tonic-desktop
+cd by-feature/node-backend
 ```
-3. Install npm modules.
+3. Install dependencies using `npm`, `pnpm`, or `yarn`.
 ```bash
 npm i
 ```
-or
-```bash
-yarn
-```
-4. Install the Socket SDK compiler following with `brew`, `apt-get` or `nuget` (we'll publish it soon).
+4. Install the Socket SDK compiler following instructions [here](sockets.sh/docs/installation).
+5. Build and run the application with either `ssc build -r`, `npm start`, `pnpm start`, or `yarn start`.
 
-5. Run the application with `npm start` or `yarn start`
+To run the app you need to have [Node.js](https://nodejs.org/en/) installed and available in your path.
+You can also bundle Node.js with your app. See [this example](../node-backend-bundled/).
 
-### [More examples](../README.md)
+### [More examples](../../README.md)
