@@ -1,5 +1,5 @@
 {
-  "name": "node-backend",
+  "name": "node-backend-bundled",
   "version": "1.0.0",
   "main": "main.js",
   "type": "module",

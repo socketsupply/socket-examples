@@ -52,7 +52,7 @@ for ARCH in darwin-x64; do
 
 done
 
-cp -- "$UNPACKED/bin/node" node
-if [ ! -L "npm" ]; then
-  ln -s -- "$UNPACKED/bin/npm"
-fi
+cp -- "$UNPACKED/bin/node" src/node
+# if [ ! -L "npm" ]; then
+#   ln -s -- "$UNPACKED/bin/npm"
+# fi
