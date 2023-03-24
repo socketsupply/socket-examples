@@ -21,6 +21,8 @@ All the examples are split into three categories:
      example that shows how to create multiple windows in a desktop app.
    - [Node.js backend](by-feature/node-backend) - a simple example that
      shows how to use Node.js backend in a desktop app.
+   - [Node.js embedded backend](by-feature/node-backend-bundled) - a Node.js example that
+     shows how to embed Node.js backend into your desktop app.
 
 ## Support
 
