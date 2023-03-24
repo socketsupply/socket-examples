@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Getting Started with Create React App and Socket Runtime
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This tutorial will show you how to use [Socket Runtime](https://github.com/socketsupply/socket)
+with [Create React App](https://create-react-app.dev) or update your existing CRA project to use Socket Runtime.
 
-## Available Scripts
+Note: you also can use [Create Socket App](https://github.com/socketsupply/create-socket-app) to create a new
+React (or Svelte, Tonic, Vue, etc.) project with Socket Runtime already installed.
 
-In the project directory, you can run:
+First, create a new project with Create React App:
 
-### `npm start`
+```bash
+npx create-react-app create-react-app
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This will create a new project in the `create-react-app` directory.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install Socket Runtime from npm:
 
-### `npm test`
+```bash
+npm install -S @socketsupply/socket
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+...or build it from source following instractions on the Socket Supply Co. [website](https://socketsupply.co).
 
-### `npm run build`
+Now you should have `ssc` command available in your terminal. Run the `ssc init --config` command to create a new Socket Runtime configuration file:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+ssc init --config
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will create a new `socket.ini` file in the root of your project. Open it and edit following lines under
+the `[build]` section:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```ini
+; The name of the program and executable to be output. Can't contain spaces or special characters. Required field.
+name = "create-react-app-example"
 
-### `npm run eject`
+; A directory is where your application's code is located.
+copy = "build"
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+; The binary output path. It's recommended to add this path to .gitignore.
+output = "dist"
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+; The build script
+script = PUBLIC_URL=./ npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The build script will be executed when you run `ssc build` command. It will build your React application
+with npm script `build` and set `PUBLIC_URL` environment variable to `./` to make sure that all assets
+are loaded correctly. Resulting React application will be copied to the `build` directory.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The `ssc build` command will build your React application and create a new executable file in the `dist` directory.
 
-## Learn More
+Try to run the executable file:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+ssc run # only run the build application
+# or
+ssc build -r # build and run the application
+# see `ssc --help` for more options
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Congratulations! You have successfully created a new Socket Runtime project with Create React App!
