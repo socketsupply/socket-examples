@@ -1,18 +1,78 @@
-# Vue 3 + TypeScript + Vite
+# Getting Started with Vite and Socket Runtime
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This tutorial will show you how to use [Socket Runtime](https://github.com/socketsupply/socket)
+with [Vite](https://vitejs.dev) or update your existing Vite project to use Socket Runtime.
 
-## Recommended IDE Setup
+Note: you also can use [Create Socket App](https://github.com/socketsupply/create-socket-app) to create a new
+Vue (or React, Svelte, Tonic, etc.) project with Socket Runtime already installed.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+First, create a new project with Create React App:
 
-## Type Support For `.vue` Imports in TS
+```bash
+npx create-vite-app vite-vue-ts --template vue-ts
+```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+This will create a new project in the `vite-vue-ts` directory.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Install Socket Runtime from npm:
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```bash
+npm install -S @socketsupply/socket
+```
+
+...or build it from source following instractions on the Socket Supply Co. [website](https://socketsupply.co).
+
+Now you should have `ssc` command available in your terminal. Run the `ssc init --config` command to create a new Socket Runtime configuration file:
+
+```bash
+ssc init --config
+```
+
+This will create a new `socket.ini` file in the root of your project. Open it and edit following lines under
+the `[build]` section:
+
+```ini
+; ssc will copy everything in this directory to the build output directory.
+; This is useful when you want to avoid bundling or want to use tools like
+; vite, webpack, rollup, etc. to build your project and then copy output to
+; the Socket bundle resources directory.
+copy = "dist"
+
+; The name of the program and executable to be output. Can't contain spaces or special characters. Required field.
+name = "create-react-app-example"
+
+; The name of the program and executable to be output. Can't contain spaces or special characters. Required field.
+name = "vite-vue-ts"
+
+; The binary output path. It's recommended to add this path to .gitignore.
+output = "build"
+
+; The build script
+script = "npm run build"
+```
+
+You also need to change the `build` script in the `package.json` file:
+
+```json
+{
+  "scripts": {
+    "build": "vue-tsc && vite build --base=./ .",
+  }
+}
+```
+
+The `--base=./` option will make sure that all assets are loaded correctly. Resulting Vue application will be copied to the `dist` directory.
+
+The `ssc build` command will build your Vue TypeScript application and create a new executable file in the `build` directory.
+
+Try to run the executable file:
+
+```bash
+ssc run # only run the build application
+# or
+ssc build -r # build and run the application
+# see `ssc --help` for more options
+```
+
+Congratulations! You have successfully created a new Socket Runtime project with Create React App!
+
