@@ -1,0 +1,30 @@
+<textarea disabled="true" style="height: 200px; width: 400px;"></textarea>
+<hr>
+<button>send ping</button>
+
+<script type="module">
+  import application from 'socket:application'
+
+  try {
+    await application.backend.open()
+  } catch (error) {
+    console.error(error)
+  }
+
+  const currentWindow = await application.getCurrentWindow()
+  const textarea = document.querySelector('textarea')
+  const button = document.querySelector('button')
+
+  button.addEventListener('click', () => {
+    currentWindow.send({ event: 'ping', backend: true })
+    textarea.value += 'ping\n'
+  })
+
+  currentWindow.on('pong', (event) => {
+    textarea.value += 'pong\n'
+  })
+
+  currentWindow.on('process-error', (event) => {
+    textarea.value += 'process-error\n' + JSON.stringify(event.detail, null, 2)
+  })
+</script>

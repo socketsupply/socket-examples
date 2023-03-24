@@ -1,0 +1,24 @@
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Ignore all files in the node_modules folder
+node_modules/
+
+# Default output directory
+build/
+dist/
+
+# Provisioning profile
+*.mobileprovision
+
+/node-v*-darwin-x64.tar.gz
+/node-v*-darwin-x64/
+/node-v*-sha256sums.txt.asc
+/src/node
