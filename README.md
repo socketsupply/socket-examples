@@ -16,7 +16,7 @@ All the examples are split into three categories:
 3. [By feature examples](by-feature) - examples that show how
    to use specific features of the Socket runtime.
    - [filesystem](by-feature/filesystem) - a simple example that shows
-     how to read and write files in.
+     how to read and write files in the desktop or mobile Socket app.
    - [window management](by-feature/multiple-windows) - a simple
      example that shows how to create multiple windows in a desktop app.
    - [Node.js backend](by-feature/node-backend) - a simple example that
