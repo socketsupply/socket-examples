@@ -8,7 +8,7 @@ you already know.
 All the examples are split into three categories:
 1. [Basic examples](basic) - simple examples that show how to
    use the Socket runtime to build a desktop app.
-   - [TodoMVC](basic/TodoMVC)
+   - [TodoMVC](basic/todomvc)
 2. [Advanced examples](advanced) - more complex examples that
    show how to use 3rd party libraries and frameworks with the Socket runtime.
    - [create-react-app](advanced/create-react-app)
