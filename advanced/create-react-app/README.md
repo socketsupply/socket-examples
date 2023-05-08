@@ -42,7 +42,13 @@ copy = "build"
 output = "dist"
 
 ; The build script
-script = PUBLIC_URL=./ npm run build
+script = npm run build
+```
+
+Create the `.env` file and set the `PUBLIC_URL` environment variable to `./`:
+
+```env
+PUBLIC_URL=./
 ```
 
 The build script will be executed when you run `ssc build` command. It will build your React application
