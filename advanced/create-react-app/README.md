@@ -42,12 +42,24 @@ copy = "build"
 output = "dist"
 
 ; The build script
-script = PUBLIC_URL=./ npm run build
+script = npm run build
+```
+
+Now either create the `.env` file and set the `PUBLIC_URL` environment variable to `./`:
+
+```env
+PUBLIC_URL=./
+```
+
+...or add the `homepage` field in the `package.json` file:
+
+```json
+  "homepage": "./",
 ```
 
 The build script will be executed when you run `ssc build` command. It will build your React application
 with npm script `build` and set `PUBLIC_URL` environment variable to `./` to make sure that all assets
-are loaded correctly. Resulting React application will be copied to the `build` directory.
+are loaded correctly (see [Create React App Advanced Configuration](https://create-react-app.dev/docs/advanced-configuration/)). Resulting React application will be copied to the `build` directory.
 
 The `ssc build` command will build your React application and create a new executable file in the `dist` directory.
 
@@ -59,5 +71,7 @@ ssc run # only run the build application
 ssc build -r # build and run the application
 # see `ssc --help` for more options
 ```
+
+Note for Windows users: you should run these commands in the Windows Terminal or in the PowerShell.
 
 Congratulations! You have successfully created a new Socket Runtime project with Create React App!
