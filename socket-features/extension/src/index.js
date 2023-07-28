@@ -29,9 +29,10 @@ input.addEventListener('keydown', async (e) => {
     e.stopPropagation()
     return
   }
+  code.textContent += '\n$ ' + input.value + '\n\n'
   history.unshift(input.value)
   historyIndex = 0
-  const result = await ext.binding.process.spawn({ command: input.value })
+  await ext.binding.process.spawn({ command: input.value })
   input.value = ''
 })
 
