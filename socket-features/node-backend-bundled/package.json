@@ -7,6 +7,6 @@
     "start": "ssc build -r -o"
   },
   "dependencies": {
-    "@socketsupply/socket-node": "0.1.0"
+    "@socketsupply/socket-node": "~0.1.2"
   }
 }
