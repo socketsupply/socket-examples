@@ -18,7 +18,7 @@ npm i
 ```
 4. Download and install Node.js for your platform. (TODO: only works on macOS at the moment)
 ```bash
-get-node.sh
+./get-node.sh
 ```
 5. Install the Socket SDK compiler following instructions [here](https://socketsupply.co/docs).
 6. Build and run the application with either `ssc build -r`, `npm start`, `pnpm start`, or `yarn start`.
