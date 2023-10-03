@@ -8,7 +8,7 @@
     "watch:ssc": "ssc build -r --port 3000 .",
     "build": "run-s build:*",
     "build:next": "next build",
-    "build:ssc": "ssc build",
+    "build:ssc": "ssc build .",
     "start": "npm run watch",
     "test": "run-s test:*",
     "test:lint": "next lint"
