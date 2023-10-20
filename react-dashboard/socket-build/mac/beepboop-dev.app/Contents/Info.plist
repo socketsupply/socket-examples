@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!--- Metadata -->
+  <key>CFBundleDisplayName</key>
+  <string>beepboop-dev</string>
+
+  <key>CFBundleName</key>
+  <string>beepboop-dev</string>
+
+  <key>CFBundleIconFile</key>
+  <string>icon.icns</string>
+
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+
+  <key>CFBundleVersion</key>
+  <string>1.0.0</string>
+
+  <key>CFBundleShortVersionString</key>
+  <string>1.0.0</string>
+
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+
+  <key>CFBundleExecutable</key>
+  <string>beepboop-dev</string>
+
+  <key>CFBundleIdentifier</key>
+  <string>com.beepboop</string>
+
+  <key>LSApplicationCategoryType</key>
+  <string></string>
+
+  <key>NSHumanReadableCopyright</key>
+  <string>{{meta_copyright}}</string>
+
+  <key>NSMainNibFile</key>
+  <string>MainMenu</string>
+
+  <key>NSPrincipalClass</key>
+  <string>AtomApplication</string>
+
+
+  <!-- Application configuration -->
+  <key>NSLocationDefaultAccuracyReduced</key>
+  <true/>
+
+  <key>LSMinimumSystemVersion</key>
+  <string>13.0.0</string>
+
+  <key>LSMultipleInstancesProhibited</key>
+  <true/>
+
+  <key>NSHighResolutionCapable</key>
+  <true/>
+
+  <key>NSRequiresAquaSystemAppearance</key>
+  <false/>
+
+  <key>NSSupportsAutomaticGraphicsSwitching</key>
+  <true/>
+
+  <key>SoftResourceLimits</key>
+  <dict>
+      <key>NumberOfFiles</key>
+      <integer>1024</integer>
+  </dict>
+
+  <key>WKAppBoundDomains</key>
+  <array>
+      <string>localhost</string>
+      <string>com.beepboop</string>
+  </array>
+
+
+  <!-- Permission usage descriptions -->
+  <key>NSAppDataUsageDescription</key>
+  <string>
+    beepboop would like shared app data access
+  </string>
+
+  <key>NSBluetoothAlwaysUsageDescription</key>
+  <string>
+    beepboop would like to discover and connect to peers using Bluetooth
+  </string>
+
+  <key>NSCameraUsageDescription</key>
+  <string>
+    beepboop would like to access to your camera
+  </string>
+
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>
+    beepboop would like access to your location
+  </string>
+
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>
+    beepboop would like access to your location when in use
+  </string>
+
+  <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+  <string>
+    beepboop would like temporary access to your location
+  </string>
+
+  <key>NSMicrophoneUsageDescription</key>
+  <string>
+    beepboop would like to access to your microphone
+  </string>
+
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>
+    beepboop would like to access Speech Recognition
+  </string>
+
+  <key>NSMotionUsageDescription</key>
+  <string>
+    beepboop would like to access to detect your device motion
+  </string>
+
+
+  <!-- Security configuration -->
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <false/>
+
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+
+    <key>NSExceptionDomains</key>
+    <dict>
+      <key>127.0.0.1</key>
+      <dict>
+        <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+        <true/>
+
+        <key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+        <false/>
+
+        <key>NSIncludesSubdomains</key>
+        <false/>
+
+        <key>NSTemporaryExceptionMinimumTLSVersion</key>
+        <string>1.0</string>
+
+        <key>NSTemporaryExceptionAllowsInsecureHTTPSLoads</key>
+        <false/>
+      </dict>
+
+      <key>localhost</key>
+      <dict>
+        <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+        <true/>
+
+        <key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+        <false/>
+
+        <key>NSIncludesSubdomains</key>
+        <false/>
+
+        <key>NSTemporaryExceptionMinimumTLSVersion</key>
+        <string>1.0</string>
+
+        <key>NSTemporaryExceptionAllowsInsecureHTTPSLoads</key>
+        <false/>
+      </dict>
+    </dict>
+  </dict>
+
+
+  <!-- Debug information -->
+  <key>BuildMachineOSBuild</key>
+  <string>23A334</string>
+
+  <key>BuildMachineOSBuild</key>
+  <string>23A334</string>
+
+  <key>DTSDKName</key>
+  <string>macosx14.0</string>
+
+  <key>DTXcode</key>
+  <string>15.0.1</string>
+
+  <key>DTSDKBuild</key>
+  <string>14.0</string>
+
+  <key>DTXcodeBuild</key>
+  <string>15A507</string>
+
+  <!-- User given plist data -->
+
+  </dict>
+</plist>
