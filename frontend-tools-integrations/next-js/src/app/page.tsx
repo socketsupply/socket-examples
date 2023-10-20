@@ -9,12 +9,9 @@ export default function Home() {
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
         <ul>
-          <li><a href="./bare-page">Click here to go to a different page</a></li>
-          <li><a href="./another-page">Click here to go to an index page</a></li>
-          <li><a href="./bare-page/nested-page">Click here to go to a different page</a></li>
-          <li><a href="/bare-page">Click here to go to a different page</a></li>
-          <li><a href="/another-page">Click here to go to an index page</a></li>
-          <li><a href="/bare-page/nested-page">Click here to go to a different page</a></li>
+          <li><a href="/bare-page">Click here to go to /bare-page</a></li>
+          <li><a href="/bare-page/nested-page">Click here to go to /bare-page/nested-page</a></li>
+          <li><a href="/another-page">Click here to go to /another-page</a></li>
         </ul>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
