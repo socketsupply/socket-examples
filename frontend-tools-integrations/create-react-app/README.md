@@ -20,7 +20,7 @@ Install Socket Runtime from npm:
 npm install -S @socketsupply/socket
 ```
 
-...or build it from source following instractions on the Socket Supply Co. [website](https://socketsupply.co).
+...or build it from source following instructions on the Socket Supply Co. [website](https://socketsupply.co).
 
 Now you should have `ssc` command available in your terminal. Run the `ssc init --config` command to create a new Socket Runtime configuration file:
 
