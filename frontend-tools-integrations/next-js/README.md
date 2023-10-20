@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting Started with Next.js and Socket Runtime
 
-## Getting Started
+This tutorial will show you how to use [Socket Runtime](https://github.com/socketsupply/socket)
+with [Next.js](https://nextjs.org) or update your existing Next project to use Socket Runtime.
 
-First, run the development server:
+**Note:** This example requires un-released Socket Runtime features that will be available in the next release.
+
+## Set up Next.js
+
+First, create a new project with Create Next App:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app@latest
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will create a new project in the directory you choose.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Configure Next to build into a pure static mode:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```js
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export' // This tells next to only build static assets
+}
 
-## Learn More
+module.exports = nextConfig
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Set up Socket Runtime
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Install Socket Runtime from npm:
 
-## Deploy on Vercel
+```bash
+npm install -S @socketsupply/socket
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+...or build it from source following instractions on the Socket Supply Co. [website](https://socketsupply.co).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Now you should have `ssc` command available in your terminal. Run the `ssc init --config` command to create a new Socket Runtime configuration file:
+
+```bash
+ssc init --config
+```
+
+This will create a new `socket.ini` file in the root of your project. Open it and edit following lines under
+the `[build]` section:
+
+```ini
+; ssc will copy everything in this directory to the build output directory.
+; This is useful when you want to avoid bundling or want to use tools like
+; vite, webpack, rollup, etc. to build your project and then copy output to
+; the Socket bundle resources directory.
+copy = "out"
+
+; The name of the program and executable to be output. Can't contain spaces or special characters. Required field.
+name = "next-socket-app"
+
+; The binary output path. It's recommended to add this path to .gitignore.
+output = "build"
+```
+
+## Configure dev and build scripts.
+
+Set up the build and watch scripts in package.json.
+
+```json
+{
+  "name": "next-js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "watch": "run-p watch:*",
+    "watch:next": "next dev",
+    "watch:ssc": "ssc build -r --port=3000 .",
+    "build": "run-s build:*",
+    "build:next": "next build",
+    "build:ssc": "ssc build .",
+    "start": "npm run watch",
+    "test": "run-s test:*",
+    "test:lint": "next lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "npm-run-all2": "^6.0.6",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
+```
+
+The `run-s` and `run-p` commands in are provided by the `npm-run-all2` development helper and stands for "run series" and "run parallel". The "watch" script runs the socket runtime and the next development server in parallel. The `--port` flag in the `watch:ssc` script loads the next development server running on that port.
+
+The `build` script runs a `next build` followed by a `ssc build .`. Next builds a static version of the app to the `out` directory, and then `ssc` copies those results into the built app bundle, in the `build` directory.
+
+Try to run the executable file:
+
+```bash
+npm run watch # run the next development server loaded in ssc
+npm run build # build a static next site, and create an app bundle in `build``
+```
+
+Congratulations! You have successfully created a new Socket Runtime project with Create Next App!
+
