@@ -1,0 +1,33 @@
+{
+  "name": "next-js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "watch": "run-p watch:*",
+    "watch:next": "next dev",
+    "watch:ssc": "ssc build -r --port=3000 .",
+    "build": "run-s build:*",
+    "build:next": "next build",
+    "build:ssc": "ssc build .",
+    "start": "npm run watch",
+    "test": "run-s test:*",
+    "test:lint": "next lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "npm-run-all2": "^6.0.6",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
