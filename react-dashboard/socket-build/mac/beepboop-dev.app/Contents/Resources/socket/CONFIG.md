@@ -49,7 +49,7 @@ script |  |  The build script. It runs before the `[build] copy` phase.
 
 Key | Default Value | Description
 :--- | :--- | :---
-sources |  | 
+sources |  |
 
 # `webview`
 
@@ -105,15 +105,15 @@ main_activity |  |  Name of the MainActivity class. Could be overwritten by cust
 manifest_permissions |  |  Which permissions does your application need: https://developer.android.com/guide/topics/permissions/overview
 native_abis |  |  To restrict the set of ABIs that your application supports, set them here.
 native_cflags |  |  Used for adding custom source files and related compiler attributes.
-native_sources |  | 
-native_makefile |  | 
-sources |  | 
+native_sources |  |
+native_makefile |  |
+sources |  |
 
 # `ios`
 
 Key | Default Value | Description
 :--- | :--- | :---
-codesign_identity |  |  signing guide: https://sockets.sh/guides/#ios-1
+codesign_identity |  |  signing guide: https://socketsupply.co/guides/#ios-1
 distribution_method |  |  Describes how Xcode should export the archive. Available options: app-store, package, ad-hoc, enterprise, development, and developer-id.
 provisioning_profile |  |  A path to the provisioning profile used for signing iOS app.
 simulator_device |  |  which device to target when building for the simulator

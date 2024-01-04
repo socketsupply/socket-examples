@@ -1,7 +1,7 @@
 # Socket Runtime Example Projects
 
 This repository contains example projects powered by the
-[Socket](https://sockets.sh/) which helps you build lean, fast,
+[Socket](https://socketsupply.co/) which helps you build lean, fast,
 cross-platform apps for desktop and mobile, using the web technologies
 you already know.
 
